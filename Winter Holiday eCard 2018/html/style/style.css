@@ -36,13 +36,13 @@ a {
   flex: 0 0 calc(70% - 20px) !important; */
   width: 100%;
   margin-left: 40px;
-  max-height: calc(100vh - 156px);
+  max-height: calc(100vh - 200px);
 }
 
 .main-content svg {
   border-radius: 20px;
   height: 100%;
-  max-height: calc(100% - 156px);
+  max-height: calc(100% - 200px);
   margin: 0 auto;
   display: block;
   width: auto;
@@ -144,9 +144,17 @@ a {
   margin-top: 20px;
 }
 
+.wishing > p {
+  flex: 0 0 75%;
+}
+
 .company-logo {
   font-size: 20px;
   font-weight: 700;
+}
+
+.company-logo > img {
+  width: 100%;
 }
 
 .logo {
@@ -260,6 +268,19 @@ a {
     -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
+
+  .company-logo > img {
+    margin-bottom: 25px;
+  }
+
+  #share-popup .modal-dialog .at-resp-share-element.at-mobile .at-share-btn {
+    margin-right: 2px;
+  }
+
+  #share-popup .modal-dialog {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 767px) {
@@ -312,5 +333,9 @@ a {
 
   .wishing {
     text-align: center;
+  }
+
+  #share-popup .modal-body {
+    padding: 20px;
   }
 }
