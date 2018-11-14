@@ -9,6 +9,10 @@ a {
   transition: .3s;
 }
 
+.canvas-container {
+  display: none;
+}
+
 .accent {
   color: #50C2EF;
 }
