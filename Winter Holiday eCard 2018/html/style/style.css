@@ -15,6 +15,17 @@ a {
   color: #ED4C36;
 }
 
+
+.no-fixed {
+  position: static;
+}
+
+.no-fixed .wrapper {
+  margin: 40px auto;
+  position: static;
+  transform: none;
+}
+
 body {
   background-color: #193167;
   color: #858996;
@@ -30,7 +41,7 @@ body {
   border-radius: 20px;
   width: 100%;
   max-width: 1280px;
-  padding: 48px;
+  padding: 45px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -71,7 +82,12 @@ body {
 }
 
 .desc {
-  font-size: 14px;
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.desc > br {
+  display: none;
 }
 
 .menu {
@@ -120,6 +136,10 @@ body {
 
 .theme.selected {
   border-color: #ED4C36;
+}
+
+.main-content .btn-holder {
+  display: none !important;
 }
 
 .btn-holder {
@@ -237,6 +257,7 @@ body {
   }
 
   .wrapper {
+    border-radius: 0;
     -ms-flex-direction: column !important;
     flex-direction: column !important;
     padding-top: 24px;
@@ -244,19 +265,28 @@ body {
     transform: none;
   }
 
+  .desc > br {
+    display: block;
+  }
+
   .menu {
     min-height: auto;
   }
 
+  .side-content {
+    text-align: center;
+  }
+
   .main-content {
+    margin-top: 40px;
     margin-left: 0;
   }
 
   .categories {
-    display: -ms-flexbox !important;
+    /* display: -ms-flexbox !important;
     display: flex !important;
     -ms-flex-pack: distribute !important;
-    justify-content: space-around !important;  
+    justify-content: space-around !important;   */
   }
 
   .category {
@@ -272,6 +302,15 @@ body {
     margin-left: 25px;
   }
 
+  .main-content .btn-holder {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+
+  .side-content .btn-holder {
+    display: none !important;
+  }
+
   .btn-holder {
     -ms-flex-pack: center !important;
     justify-content: center !important;
@@ -280,9 +319,10 @@ body {
   }
 
   .wishing {
-    font-size: 16px;
+    /* font-size: 16px; */
     -ms-flex-direction: column !important;
     flex-direction: column !important;
+    text-align: center;
   }
 
   .company-logo > img {
@@ -309,15 +349,18 @@ body {
   }
 
   .categories {
-    display: block !important;
+    /* display: block !important; */
+    text-align: left;
   }
 
   .category {
-    display: block;
-    text-align: center;
+    /* display: block; */
+    font-size: 12px;
+    padding: 3px 15px;
+    /* text-align: center;
     max-width: 185px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
   }
 
   .themes {
@@ -348,7 +391,16 @@ body {
   }
 
   .wishing {
+    font-size: 16px;
     text-align: center;
+  }
+
+  .wishing > p > br { 
+    display: none;
+  }
+
+  .company-logo {
+    max-width: 210px;
   }
 
   #share-popup .modal-body {

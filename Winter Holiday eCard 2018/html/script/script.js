@@ -31,9 +31,26 @@ var components = {
   },
 }
 
+function checkHeight() {
+  var wh = window.innerHeight;
+  var ww = window.innerWidth;
+  var bh = document.querySelector('.wrapper').clientHeight;
+  var body = document.querySelector('body');
+
+  if (bh > wh && ww > 991) {
+    body.classList.add('no-fixed');
+  } else {
+    body.classList.remove('no-fixed');
+  }
+}
+
 $(document).ready(function() {
   // var test = navigator.userAgent;
   // $('.title').append(test);
+  checkHeight();
+
+  window.onresize = checkHeight;
+
   var infiniteLoopAlternate = anime({
     targets: '#start',
     translateY: 10,
@@ -110,7 +127,8 @@ $(document).ready(function() {
   })
 
   // Download to image on clicked
-  $('.btn-download').on('click', function() {
+  $('.btn-download').on('click', function(e) {
+    e.preventDefault();
     var canvas = document.getElementById('canvas');
     var canvasFabric = new fabric.Canvas('canvas');
 
